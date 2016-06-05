@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这个APP采用了MVP设计模式，实现逻辑业务和视图的分离，易于测试和修改" />
+
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="后续将会增加后台服务器，服务器采用tomcat+javaee+sqlserver，将会支持评论、视频、图集等模块" />
+
+</LinearLayout>

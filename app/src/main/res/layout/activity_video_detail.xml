@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/news_detail_layout_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="30dp">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tvDigest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+            <FrameLayout
+                android:id="@+id/video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/black">
+
+                <com.universalvideoview.UniversalVideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:uvv_autoRotation="true"
+                    app:uvv_fitXY="false" />
+
+                <com.universalvideoview.UniversalMediaController
+                    android:id="@+id/media_controller"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:uvv_scalable="true" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:elevation="5dp"
+        android:background="@android:color/white">
+        <EditText
+            android:id="@+id/edtComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:drawableLeft="@drawable/ic_comment"
+            android:drawablePadding="2dp"
+            android:hint="写评论"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            />
+        <Button
+            android:layout_gravity="center_vertical"
+            android:id="@+id/btn_comment"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="提交"
+            android:textSize="16sp"
+            android:clickable="false"
+            style="@style/AppWidget.Button"/>
+    </LinearLayout>
+</RelativeLayout>
