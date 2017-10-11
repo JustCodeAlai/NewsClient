@@ -24,5 +24,6 @@ public class TestNewsModel extends InstrumentationTestCase {
         Log.e("======Test=====", "hkdgajsgljsajl");
 	Log.e("======Test=====", "hkdgajsgljsajl");
 	Log.e("======Test=====", "hkdgajsgljsajl");
+	Log.e("======Test=====", "hkdgajsgljsajl");
     }
 }
